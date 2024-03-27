@@ -16,8 +16,8 @@ export class StudentResolver {
     }
 
     @Query(returns => [StudentType])
-    async students(): Promise<StudentType[]> {
-        return this.studentService.getStudents();
+    async students() {
+      return this.studentService.getStudents();
     }
     
 

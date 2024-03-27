@@ -5,9 +5,10 @@ import { Student } from './student.entity';
 import { StudentResolver } from './student.resolver';
 
 @Module({
-  imports:[
-    TypeOrmModule.forFeature([Student])
+  imports: [
+    TypeOrmModule.forFeature([Student]),
   ],
-  providers: [StudentService, StudentResolver]
+  providers: [StudentResolver, StudentService],
+  exports: [StudentService]
 })
 export class StudentModule {}
