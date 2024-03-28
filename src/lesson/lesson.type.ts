@@ -16,6 +16,6 @@ export class LessonType {
     @Field()
     endDate: string;
 
-    @Field(type => StudentType)
+    @Field(type => [StudentType])
     students: string[]
 }
